@@ -33,29 +33,26 @@ namespace leetcode
         }
        
         
-       public static int CalculateSq(int sq)
+       public static int[] CalculateSq(int[] sq)
         {
+           for (int i = 0; i < sq.Length; i++)
+           {
            
-           int sqqr = sq * sq;
-
-            return sqqr;
-
-        } 
-         public static void Main()
-        {
-            Console.WriteLine("Please enter number");
-            int n = int.Parse(Console.ReadLine());
-
-            for (int i = 0; i < n; i++)
-            {
-                Console.WriteLine("please enter ints:");
-                int x = int.Parse(Console.ReadLine()); 
-                int sqqr = CalculateSq(x);
-                Console.WriteLine($"your square = {sqqr}");
-                
-            }
-         
+            sq[i] = (int)Math.Pow(sq[i], 2);
+           }
+            
+        return sq;
         }
+
+         public static void PrintArray(int[] array)
+         {
+           for (int i = 0; i < array.Length; i++)
+           {
+            Console.WriteLine(array[i]);
+           }
+
+         }
+       
    
         
       
